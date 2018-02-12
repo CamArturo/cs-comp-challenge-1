@@ -1,3 +1,5 @@
+/*https://coolors.co/4c5454-ff715b-ffffff-1ea896-523f38*/
+
 html {
     color: #222;
     font-size: 1em;
@@ -53,6 +55,34 @@ textarea {
    Camilo's custom styles
    ========================================================================== */
 
+.container {
+    /*display: flex; !* or inline-flex *!*/
+}
+
+.flex-container {
+    display: flex;
+}
+
+.col-1 {
+    width: 60%;
+}
+
+.col-2 {
+    width: 40%;
+}
+
+.flex-item {
+
+}
+
+.title {
+    flex-grow: 2;
+    background-color: #FF715B;
+}
+
+img {
+    max-width: 100%;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
