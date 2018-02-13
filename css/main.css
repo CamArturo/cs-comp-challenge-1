@@ -202,6 +202,40 @@ img {
     width: 40vw;
 }
 
+.dots {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10px 10px 0 0;
+}
+
+.dots img {
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.left-arrow,
+.right-arrow {
+    position: relative;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    height: 80px;
+    right: 0%;
+}
+
+.right-arrow img,
+.left-arrow img {
+    height: 80px;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    height: 80px;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -218,18 +252,14 @@ img {
     .col-1 {
         width: 100vw;
     }
-
-    .col-2 img {
-        width: 100vw;
-        max-width: none;
+    .col-2 {
+        display: none;
     }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-    .col-2 {
-        display: none;
-    }
+
 }
 
 /* Extra Small Devices, Phones */

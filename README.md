@@ -8,6 +8,7 @@ I generated a color palette based on the red shade found in Colorado.
 
 ## Font
 
+Lora - I choose Lora for a header font because it is a serif font and Montserrat for the text.
 
 ## Responsive
 
