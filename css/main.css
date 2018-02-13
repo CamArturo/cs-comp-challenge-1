@@ -1,9 +1,15 @@
 /*https://coolors.co/4c5454-ff715b-ffffff-1ea896-523f38*/
 
 html {
+    box-sizing: border-box;
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 ::-moz-selection {
@@ -55,34 +61,144 @@ textarea {
    Camilo's custom styles
    ========================================================================== */
 
-.container {
-    /*display: flex; !* or inline-flex *!*/
+body {
+    width: 100%;
 }
 
-.flex-container {
-    display: flex;
+h1 {
+    color: #000;
+    font-family: 'Lora', serif;
 }
 
-.col-1 {
-    width: 60%;
-}
-
-.col-2 {
-    width: 40%;
-}
-
-.flex-item {
-
-}
-
-.title {
-    flex-grow: 2;
-    background-color: #FF715B;
+p {
+    margin: 0;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
 }
 
 img {
     max-width: 100%;
 }
+
+.col-1 {
+    width: 60vw;
+    float: left;
+}
+
+.col-1 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.333%;
+    min-height: 33.333vh;
+    text-decoration: none;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.button-container a {
+    width: auto;
+    min-height: auto;
+}
+
+.button {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #000;
+}
+
+.button:hover {
+    border: 2px solid #efefef;
+}
+
+.button img {
+    width: 40px;
+    padding: 0 10px 0 0;
+}
+
+.info-button {
+    margin-left: 1rem;
+}
+
+.title {
+    flex-basis: 66.6666%;
+    text-align: left;
+}
+
+.title a {
+    text-decoration: none;
+    color: #000;
+    font-weight: normal;
+}
+
+.row-1 .title {
+    padding: 2rem;
+}
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.inner-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-item.inner-flex {
+    width: 100%;
+    min-height: 100%;
+}
+
+.flex-item.inner-flex:hover {
+    border: 2px solid #efefef;
+}
+
+.flex-item.inner-flex img {
+    margin: 0 auto;
+    display: block;
+}
+
+.flex-item.inner-flex p {
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.denver,
+.history {
+    background-color: #FF715B;
+}
+
+.mall,
+.zoo {
+    background-color: rgba(82, 63, 56, 0.78);
+}
+
+.station,
+.convention {
+    background-color: #9ea6a6;
+}
+
+.garden,
+.red-rocks {
+    background-color: #1EA896;
+}
+
+.col-2 {
+    float: left;
+    max-width: 40vw;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -95,18 +211,33 @@ img {
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
+    .col-1 {
+        width: 100vw;
+    }
 
+    .col-2 img {
+        width: 100vw;
+        max-width: none;
+    }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-
+    .col-2 {
+        display: none;
+    }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-
+    .title,
+    .col-1 .flex-item {
+        flex-basis: 100%;
+    }
+    .col-1 a {
+        width: 100%;
+    }
 }
 
 /* Custom, iPhone Retina */
