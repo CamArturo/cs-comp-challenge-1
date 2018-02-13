@@ -168,7 +168,7 @@ img {
 
 .flex-item.inner-flex p {
     text-align: center;
-    margin: 0;
+    margin: 5px 0 0 0;
     font-size: 1rem;
 }
 
@@ -194,9 +194,12 @@ img {
 
 .col-2 {
     float: left;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../img/what-to-do-in-denver-colorado.jpg);
+    height: 100vh;
     max-width: 40vw;
-    display: flex;
-    flex-wrap: nowrap;
+    width: 40vw;
 }
 
 /* ==========================================================================
